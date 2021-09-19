@@ -1,0 +1,44 @@
+<meta charset ='utf=8'>
+<script type="text/javascript">
+    "use strict";
+    
+    function calc(a,b,operation){
+        switch (operation) {
+        case '*':
+            return mul(a,b);
+            break;
+        case '/':
+            return div(a,b);
+            break;
+        case '+':
+            return sum(a+b);
+            break;
+        case '-':
+            return sub(a,b);
+        }
+    }
+    function sum(a,b){
+        return (a+b);
+    } 
+
+
+    function sub(a,b){
+        return (a-b);
+    } 
+
+    function mul(a,b){
+        return (a*b);
+    } 
+
+    function div(a,b){
+        return (a/b);
+    } 
+
+    let a=+prompt('Введите 1-ое целоцисленное значение');
+    let b=+prompt('Введите 2-ое целоцисленное значение');
+    let operation=prompt('Введите символ операции (*,/,+,-)');
+
+
+    alert(calc(a,b,operation))
+ 
+</script>
