@@ -1,0 +1,30 @@
+<meta charset ='utf=8'>
+<script type="text/javascript">
+    "use strict";
+    let rubles=+prompt("Введите кол-во рублей");
+    let rubles_string=String(rubles);
+    let len_rubles=rubles_string.length
+    let lastsymb=rubles_string.charAt(len_rubles-1)
+    if (rubles>9){
+        lastsymb=rubles_string.charAt(len_rubles-2)+lastsymb
+    }
+    switch (true) {
+        case lastsymb.charAt(lastsymb.length-1)=='1' && lastsymb != '11':
+            alert(`Ваша сумма в ${rubles} рубль успешно зачислена`);
+            break;
+        case lastsymb.charAt(lastsymb.length-1)=='2' && lastsymb != '12':
+        case lastsymb.charAt(lastsymb.length-1)=='3' && lastsymb != '13':
+        case lastsymb.charAt(lastsymb.length-1)=='4' && lastsymb != '14':
+            alert(`Ваша сумма в ${rubles} рубля успешно зачислена`);
+            break;
+        case lastsymb.charAt(lastsymb.length-1)=='5'||(parseInt(lastsymb)>=10 && parseInt(lastsymb)<=20):
+        case lastsymb.charAt(lastsymb.length-1)=='6'||(parseInt(lastsymb)>=10 && parseInt(lastsymb)<=20):
+        case lastsymb.charAt(lastsymb.length-1)=='7'||(parseInt(lastsymb)>=10 && parseInt(lastsymb)<=20):
+        case lastsymb.charAt(lastsymb.length-1)=='8'||(parseInt(lastsymb)>=10 && parseInt(lastsymb)<=20):
+        case lastsymb.charAt(lastsymb.length-1)=='9'||(parseInt(lastsymb)>=10 && parseInt(lastsymb)<=20):
+        case lastsymb.charAt(lastsymb.length-1)=='0'||(parseInt(lastsymb)>=10 && parseInt(lastsymb)<=20):
+            alert(`Ваша сумма в ${rubles} рублей успешно зачислена`);
+            break;
+        }
+
+</script>
