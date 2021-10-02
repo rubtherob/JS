@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        class IntObject {
+            constructor (hundreds,tens,units){
+                this.hundreds=hundreds
+                this.tens=tens
+                this.units=units
+            }
+
+        }
+
+
+
+        function intInObject(number){
+            if (Number.isInteger(number)){
+                Math.floor(number) 
+                return new IntObject(Math.floor(number/100),Math.floor((number%100)/10),number%10)
+            }else{
+                console.log('Введено не число')
+                return NaN
+            }
+
+        }
+
+        console.log(intInObject(+prompt('введите число в промежутке [0:999]')))
+
+
+    </script>
+</body>
+</html>
